@@ -87,7 +87,16 @@ namespace Assignment_3_Session_4
             }
             #endregion
 
+            #region 17.Using the same books array, use a while loop to print every book title. 
 
+            int counter = 0;
+
+            while (counter < books.Length)
+            {
+                Console.WriteLine(books[counter]);
+                counter++;
+            }
+            #endregion
 
 
 
