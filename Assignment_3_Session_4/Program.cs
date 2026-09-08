@@ -110,6 +110,18 @@ namespace Assignment_3_Session_4
             while (x < 3);
             #endregion
 
+            #region 19.Using the same books array, use a foreach loop to print every book title. 
+
+            foreach (string book in books)
+            {
+                Console.WriteLine(book);
+            }
+            #endregion
+
+
+
+
+
         }
     }
 }
