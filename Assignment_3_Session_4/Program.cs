@@ -180,7 +180,11 @@ namespace Assignment_3_Session_4
             Console.WriteLine(sb.ToString());
             #endregion
 
+            #region 4-Using the StringBuilder from the question above, use Replace() to change "Book List" into "Library". Print the result.
 
+            sb.Replace("Book List", "Library");
+            Console.WriteLine(sb.ToString());
+            #endregion
 
 
 
