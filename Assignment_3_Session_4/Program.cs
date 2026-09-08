@@ -170,6 +170,21 @@ namespace Assignment_3_Session_4
             Console.WriteLine(sameReference);
             #endregion
 
+            #region 3-Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same object. Print the final result. 
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("Book List");
+            sb.Append(" - Updated");
+
+            Console.WriteLine(sb.ToString());
+            #endregion
+
+
+
+
+
+
         }
 
         static void PrintFirstBook(string[] books)
