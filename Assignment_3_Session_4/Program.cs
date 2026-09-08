@@ -186,7 +186,12 @@ namespace Assignment_3_Session_4
             Console.WriteLine(sb.ToString());
             #endregion
 
+            #region 5-Given string title = "Clean Code"; and int pages = 464;, build the sentence "Book: Clean Code, Pages: 464" using the + operator. 
 
+            string C_title = "Clean Code";
+            int p_pages = 464;
+            Console.WriteLine("Book: " + C_title + ", Pages: " + p_pages);
+            #endregion
 
 
         }
