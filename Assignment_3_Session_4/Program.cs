@@ -98,7 +98,17 @@ namespace Assignment_3_Session_4
             }
             #endregion
 
+            #region 18.Write a do-while loop that prints "Checking book..." exactly 3 times.
 
+            int x = 0;
+
+            do
+            {
+                Console.WriteLine("Checking book...");
+                x++;
+            }
+            while (x < 3);
+            #endregion
 
         }
     }
