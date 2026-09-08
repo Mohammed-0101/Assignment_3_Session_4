@@ -162,6 +162,13 @@ namespace Assignment_3_Session_4
             Console.WriteLine(upperTitle);
             #endregion
 
+            #region 2-Declare two separate string variables, both set to the literal "Clean Code". Use ReferenceEquals() to check if they point to the same object in memory.
+
+            string title1 = "Clean Code";
+            string title2 = "Clean Code";
+            bool sameReference = object.ReferenceEquals(title1, title2);
+            Console.WriteLine(sameReference);
+            #endregion
 
         }
 
