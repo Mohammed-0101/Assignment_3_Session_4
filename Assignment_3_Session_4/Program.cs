@@ -199,7 +199,12 @@ namespace Assignment_3_Session_4
             Console.WriteLine($"Book: {T_title}, Pages: {pages}");
             #endregion
 
+            #region 7-Build the same sentence again, but using string.Format(). 
 
+            string result = string.Format("Book: {0}, Pages: {1}", T_title, pages);
+
+            Console.WriteLine(result);
+            #endregion
 
 
         }
