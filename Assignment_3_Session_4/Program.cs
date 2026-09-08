@@ -9,7 +9,7 @@ namespace Assignment_3_Session_4
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {   // Continue in Sheet Session 3
             #region 11.Declare int copies = 100;. Box it into an object variable, then unbox it back into a new int variable, and print both.
             int copies = 100;
             object boxedCopies = copies;
@@ -42,6 +42,30 @@ namespace Assignment_3_Session_4
                 Console.WriteLine("You can borrow this book");
             }
             #endregion
+
+            #region 14.Given string title = "Refactoring";, write a switch statement that prints "Great choice!" if the title is "Clean Code", "Nice pick!" if it's "Refactoring", and "Never heard of it" for anything else.
+
+            string title = "Refactoring";
+
+            switch (title)
+            {
+                case "Clean Code":
+                    Console.WriteLine("Great choice!");
+                    break;
+
+                case "Refactoring":
+                    Console.WriteLine("Nice pick!");
+                    break;
+
+                default:
+                    Console.WriteLine("Never heard of it");
+                    break;
+            }
+            #endregion
+
+            
+
+
         }
     }
 }
