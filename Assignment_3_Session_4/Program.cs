@@ -193,6 +193,14 @@ namespace Assignment_3_Session_4
             Console.WriteLine("Book: " + C_title + ", Pages: " + p_pages);
             #endregion
 
+            #region 6-Build the same sentence as above, but using string interpolation ($"...").
+
+            string T_title = "Clean Code";
+            Console.WriteLine($"Book: {T_title}, Pages: {pages}");
+            #endregion
+
+
+
 
         }
 
