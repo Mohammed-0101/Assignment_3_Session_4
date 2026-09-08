@@ -150,7 +150,17 @@ namespace Assignment_3_Session_4
             #endregion
 
 
+            // String in Sheet Session 4
 
+            #region 1-Declare string title = "clean code";. Call title.ToUpper() and store it in a new variable upperTitle. Print both title and upperTitle to show that title did not change.
+
+            string s_title = "clean code";
+
+            string upperTitle = s_title.ToUpper();
+
+            Console.WriteLine(s_title);
+            Console.WriteLine(upperTitle);
+            #endregion
 
 
         }
