@@ -147,6 +147,12 @@ namespace Assignment_3_Session_4
         );
             #endregion
 
+            // Access Modifiers: 
+
+            #region 1-Add a private string password = "secret"; field to a Book class. Try to print it from Main  (outside the class). What happens, and why?
+            Book book = new Book();
+            #endregion
+
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -174,5 +180,19 @@ namespace Assignment_3_Session_4
                 Console.WriteLine(title);
             }
         }
+    }
+}
+
+class Book
+{
+    // Access Modifiers
+    private string password = "secret";
+    internal int copiesInStock = 5;
+    public string Title;
+
+    // Optional: method to access private field from inside the class
+    public void PrintPassword()
+    {
+        Console.WriteLine(password);
     }
 }
