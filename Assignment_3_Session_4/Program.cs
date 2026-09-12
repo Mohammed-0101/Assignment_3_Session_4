@@ -155,7 +155,10 @@ namespace Assignment_3_Session_4
             // Can't print the password because it unseen in main() and it private
             #endregion
 
-            
+            #region 2-Add an internal int copiesInStock = 5; field to Book. Print it from Main.Does it compile? Why? 
+            Console.WriteLine(book.copiesInStock);
+            // we can print it because main class & Book class in the same project
+            #endregion
 
         }
 
