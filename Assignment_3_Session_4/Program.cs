@@ -29,6 +29,11 @@ namespace Assignment_3_Session_4
         {
             prices[0] -= 5;
         }
+
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
         static void Main(string[] args)
         {
             // Sheet 4
@@ -82,6 +87,15 @@ namespace Assignment_3_Session_4
 
             // result=20.5
             // Because Array is Reference type
+            #endregion
+
+            #region 7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.Call it and print pages afterward. How is the result different from question 5 ?
+            int pages2 = 400;
+
+            AddBonusPagesByRef(ref pages2);
+
+            Console.WriteLine(pages2);
+            //Because we using Passing or Calling By Reference
             #endregion
 
 
