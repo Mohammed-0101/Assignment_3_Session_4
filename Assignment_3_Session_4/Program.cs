@@ -20,6 +20,10 @@ namespace Assignment_3_Session_4
             Console.WriteLine("Book title: " + title);
         }
 
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
         static void Main(string[] args)
         {
             // Sheet 4
@@ -50,6 +54,20 @@ namespace Assignment_3_Session_4
             #region 4-Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with "Clean Code".
             PrintBookTitle("Clean Code");
             #endregion
+
+            #region 5-Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward. What do you expect to see, and why?
+
+            int pages = 400;
+
+            AddBonusPages(pages);
+
+            Console.WriteLine(pages);
+
+            // result = 400
+            //Because int is the value type Therefore, the change only occurs on the copy.
+            #endregion
+
+
 
         }
     }
