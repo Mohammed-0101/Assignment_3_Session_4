@@ -160,6 +160,12 @@ namespace Assignment_3_Session_4
             // we can print it because main class & Book class in the same project
             #endregion
 
+            #region 3-Add a public string Title; field to Book. Set it and print it from Main.
+            book.Title = "Clean Code";
+
+            Console.WriteLine(book.Title);
+            #endregion
+
         }
 
         static bool TryGetPrice(string title, out double price)
