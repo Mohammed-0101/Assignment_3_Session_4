@@ -139,6 +139,14 @@ namespace Assignment_3_Session_4
             PrintBookInfo(pages: 464, title: "Clean Code");
             #endregion
 
+            #region 4-Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. Call it with three book titles.
+            PrintAllTitles(
+            "Clean Code",
+            "The Pragmatic Programmer",
+            "Design Patterns"
+        );
+            #endregion
+
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -158,6 +166,13 @@ namespace Assignment_3_Session_4
         {
             Console.WriteLine("Title: " + title);
             Console.WriteLine("Pages: " + pages);
+        }
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
