@@ -128,6 +128,13 @@ namespace Assignment_3_Session_4
             }
             #endregion
 
+            #region 2-Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call it once with only a title, and once passing both a title and pages.
+
+            PrintBookInfo("Clean Code");
+            Console.WriteLine();
+            PrintBookInfo("The Pragmatic Programmer", 352);
+            #endregion
+
 
         }
 
@@ -143,6 +150,11 @@ namespace Assignment_3_Session_4
                 price = 0;
                 return false;
             }
+        }
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine("Title: " + title);
+            Console.WriteLine("Pages: " + pages);
         }
     }
 }
