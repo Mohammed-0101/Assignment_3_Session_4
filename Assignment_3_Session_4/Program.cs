@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Reflection;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -151,7 +152,10 @@ namespace Assignment_3_Session_4
 
             #region 1-Add a private string password = "secret"; field to a Book class. Try to print it from Main  (outside the class). What happens, and why?
             Book book = new Book();
+            // Can't print the password because it unseen in main() and it private
             #endregion
+
+            
 
         }
 
