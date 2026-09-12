@@ -24,6 +24,11 @@ namespace Assignment_3_Session_4
         {
             pages += 50;
         }
+
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
         static void Main(string[] args)
         {
             // Sheet 4
@@ -67,6 +72,17 @@ namespace Assignment_3_Session_4
             //Because int is the value type Therefore, the change only occurs on the copy.
             #endregion
 
+            #region 6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to see, and why?
+
+            double[] prices2 = { 25.5, 40.0 };
+
+            ApplyDiscount(prices2);
+
+            Console.WriteLine(prices2[0]);
+
+            // result=20.5
+            // Because Array is Reference type
+            #endregion
 
 
         }
