@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Reflection;
@@ -112,6 +113,36 @@ namespace Assignment_3_Session_4
 
             Console.WriteLine(prices3.Length);
             #endregion
+
+            // Sheet 5
+            // Function Parameter Passing
+
+            #region 1-Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it and print the price if found
+            double price;
+
+            bool found = TryGetPrice("Clean Code", out price);
+
+            if (found)
+            {
+                Console.WriteLine("Price: " + price);
+            }
+            #endregion
+
+
+        }
+
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
         }
     }
 }
