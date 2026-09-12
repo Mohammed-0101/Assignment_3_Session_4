@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Security.Policy;
 using System.Text;
@@ -33,6 +34,11 @@ namespace Assignment_3_Session_4
         static void AddBonusPagesByRef(ref int pages)
         {
             pages += 50;
+        }
+
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
         static void Main(string[] args)
         {
@@ -98,7 +104,14 @@ namespace Assignment_3_Session_4
             //Because we using Passing or Calling By Reference
             #endregion
 
+            #region 8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length afterward.
 
+            double[] prices3 = { 25.5, 40.0 };
+
+            ReplaceArray(ref prices3);
+
+            Console.WriteLine(prices3.Length);
+            #endregion
         }
     }
 }
