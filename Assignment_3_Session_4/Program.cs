@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,7 +48,19 @@ namespace Assignment_3_Session_4
             Console.WriteLine(genreFromText);
             #endregion
 
+            #region 8-Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to attempt the conversion. Print "Unknown genre" if it fails.
 
+            string invalidGenreText = "Mystery";
+
+            if (Enum.TryParse(invalidGenreText, out Genre parsedGenre))
+            {
+                Console.WriteLine(parsedGenre);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre");
+            }
+            #endregion
 
 
 
