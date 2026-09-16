@@ -8,8 +8,37 @@ namespace Assignment_3_Session_4
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
+            #region 4-Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book,  assign it Genre.Science, and print it.
+            Book book = new Book();
+
+            book.Title = "C# Programming";
+            book.Genre = Genre.Science;
+
+            Console.WriteLine("Question 4:");
+            Console.WriteLine(book.Genre);
+
+            #endregion
         }
     }
+}
+
+
+
+enum Genre
+{
+    Fiction,
+    NonFiction,
+    Science
+}
+
+class Book
+{
+    private string password = "123";
+    internal int copiesInStock = 5;
+    public string Title;
+    public Genre Genre;
+
 }
