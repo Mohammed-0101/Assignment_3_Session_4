@@ -12,6 +12,7 @@ namespace Assignment_3_Session_4
         
         static void Main(string[] args)
         {
+            // Sheet 5
             #region 4-Declare an enum Genre { Fiction, NonFiction, Science }. Add a Genre property to Book,  assign it Genre.Science, and print it.
             Book book = new Book();
 
@@ -63,7 +64,21 @@ namespace Assignment_3_Session_4
             #endregion
 
 
+            //C# OOP Assignment 
+            /*
+            OOP 01 - Smart Delivery Management System 
+            Part 01 : Theoretical Questions 
+            */
+            #region (A) What happens when a DeliveryAddress variable is copied into another variable and the copy is modified?
+            //answer a:
+            //The entire struct value is copied. The two variables are independent, so changes to the copy do not affect the original.
+            //because it is the value type
+            #endregion
 
+            #region b)  What happens when a Customer variable is copied into another variable and one variable modifies the object
+            //answer b:
+            //The reference is copied, so both variables refer to the same Customer object. Modifying the object through either variable is visible through the other.
+            #endregion
         }
     }
 }
@@ -72,16 +87,16 @@ namespace Assignment_3_Session_4
 
 enum Genre
 {
-    Fiction,
-    NonFiction,
-    Science
+Fiction,
+NonFiction,
+Science
 }
 
 class Book
 {
-    private string password = "123";
-    internal int copiesInStock = 5;
-    public string Title;
-    public Genre Genre;
+private string password = "123";
+internal int copiesInStock = 5;
+public string Title;
+public Genre Genre;
 
 }
