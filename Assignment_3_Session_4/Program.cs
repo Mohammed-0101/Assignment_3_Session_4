@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -93,6 +94,136 @@ namespace Assignment_3_Session_4
 
             #region  b) How can private fields and public properties improve this design? 
             // Private fields hide the internal data, while public properties provide a controlled way to access or modify it.
+            #endregion
+
+            // Smart Delivery Management System
+
+            #region Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that the original did not change.
+
+           
+            DeliveryAddress_S address1 = new DeliveryAddress_S("Cairo", "Tahrir Street", 10);
+
+            DeliveryAddress_S address2 = address1;
+
+            address2.City = "Alexandria";
+            address2.Street = "Corniche Street";
+            address2.BuildingNumber = 25;
+
+            Console.WriteLine("Original Address:");
+            Console.WriteLine(address1.GetFullAddress());
+
+            Console.WriteLine("\nCopied and Modified Address:");
+            Console.WriteLine(address2.GetFullAddress());
+            #endregion
+
+            #region  Smart Delivery Management System
+
+            // a) Create a DeliveryCenter
+            DeliveryCenter_S center = new DeliveryCenter_S();
+
+            // b) Read data for three shipments
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"Enter Shipment {i + 1} Data");
+
+                Console.Write("Tracking Code: ");
+                string trackingCode = Console.ReadLine() ?? "";
+
+                Console.Write("Description: ");
+                string description = Console.ReadLine() ?? "";
+
+                Console.Write("Weight: ");
+                decimal weight = decimal.Parse(Console.ReadLine() ?? "0");
+
+                Console.Write("Delivery Fee: ");
+                decimal deliveryFee = decimal.Parse(Console.ReadLine() ?? "0");
+
+                Console.Write("City: ");
+                string city = Console.ReadLine() ?? "";
+
+                Console.Write("Street: ");
+                string street = Console.ReadLine() ?? "";
+
+                Console.Write("Building Number: ");
+                int buildingNumber = int.Parse(Console.ReadLine() ?? "0");
+
+                // Create the address
+                DeliveryAddress_S destination =
+                    new DeliveryAddress_S(city, street, buildingNumber);
+
+                // c) Create Shipment
+                Shipment shipment = new Shipment(
+                    trackingCode,
+                    description,
+                    weight,
+                    deliveryFee,
+                    destination
+                );
+
+                // Add shipment to DeliveryCenter
+                if (center.AddShipment(shipment))
+                {
+                    Console.WriteLine("\nShipment added successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("\nDelivery center is full.");
+                }
+
+                Console.WriteLine();
+            }
+
+            // d) Print the three shipments using integer indexer
+            Console.WriteLine("--- All Shipments ---");
+
+            for (int i = 0; i < 3; i++)
+            {
+                Shipment shipment = center[i];
+
+                Console.WriteLine($"--- Shipment {i + 1} ---");
+                shipment.PrintShipment();
+                Console.WriteLine();
+            }
+
+            // e) Ask user for tracking code
+            Console.Write("Enter a tracking code to search: ");
+            string searchCode = Console.ReadLine() ?? "";
+
+            // f) Search using string indexer
+            Shipment foundShipment = center[searchCode];
+
+            // g) Print shipment if found
+            if (!string.IsNullOrWhiteSpace(foundShipment.TrackingCode))
+            {
+                Console.WriteLine(
+                    $"Shipment found: {foundShipment.TrackingCode} - {foundShipment.Description}"
+                );
+            }
+            else
+            {
+                Console.WriteLine("Shipment not found.");
+            }
+
+            // h) Demonstrate DeliveryAddress struct copy behavior
+            Console.WriteLine();
+            Console.WriteLine("--- Struct Copy Test ---");
+
+            DeliveryAddress_S originalAddress = center[0].Destination;
+
+            // Struct is copied by value
+            DeliveryAddress_S copiedAddress = originalAddress;
+
+            // Modify the copy
+            copiedAddress.BuildingNumber = 20;
+            copiedAddress.Street = "Makram Ebeid Street";
+
+            Console.WriteLine(
+                $"Original Address: {originalAddress.GetFullAddress()}"
+            );
+
+            Console.WriteLine(
+                $"Copied Address: {copiedAddress.GetFullAddress()}"
+            );
             #endregion
         }
     }
