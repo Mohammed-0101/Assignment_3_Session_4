@@ -38,7 +38,14 @@ namespace Assignment_3_Session_4
             Console.WriteLine(genreFromNumber);
             #endregion
 
+            #region 7-Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result. 
 
+            string genreText = "Science";
+
+            var genreFromText =Enum.Parse(typeof(Genre), genreText);
+
+            Console.WriteLine(genreFromText);
+            #endregion
 
 
 
