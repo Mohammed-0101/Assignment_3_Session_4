@@ -79,6 +79,21 @@ namespace Assignment_3_Session_4
             //answer b:
             //The reference is copied, so both variables refer to the same Customer object. Modifying the object through either variable is visible through the other.
             #endregion
+
+            //Question 2
+
+            #region  a) Identify at least three problems with this design from an encapsulation perspective.
+            /*
+             * 1- All fields are public
+             * 2- There is no validation
+             * 3- The internal data is exposed directly
+             * 4- There is no control over how values are changed
+             */
+            #endregion
+
+            #region  b) How can private fields and public properties improve this design? 
+            // Private fields hide the internal data, while public properties provide a controlled way to access or modify it.
+            #endregion
         }
     }
 }
