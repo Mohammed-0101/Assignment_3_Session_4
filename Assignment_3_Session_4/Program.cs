@@ -29,7 +29,14 @@ namespace Assignment_3_Session_4
             Console.WriteLine((int)Genre.Science);
             #endregion
 
+            #region 6-Given int genreNumber = 1;, cast it into a Genre value and print the result.  
 
+            int genreNumber = 1;
+
+            Genre genreFromNumber = (Genre)genreNumber;
+
+            Console.WriteLine(genreFromNumber);
+            #endregion
 
 
 
